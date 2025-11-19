@@ -12,8 +12,7 @@ def main():
     st.title("🍦 베스킨라빈스 키오스크에 오신 것을 환영해요! ✨", anchor=False)
     st.subheader("달콤한 아이스크림과 함께 행복을 채워보세요! 😊", anchor=False)
     # ... (이하 코드는 동일)
-    st.title("🍦 베스킨라빈스 키오스크에 오신 것을 환영해요! ✨", anchor=False)
-    st.subheader("달콤한 아이스크림과 함께 행복을 채워보세요! 😊", anchor=False)
+
 
     st.markdown("---") # 깔끔한 구분선
 
