@@ -1,14 +1,17 @@
 import streamlit as st
 
 def main():
-    # 🍦 페이지 설정: 더 넓게, 예쁘게, 그리고 친근한 아이콘까지!
+    # 🍦 페이지 설정: 기본 타이틀만 남겨봅니다!
     st.set_page_config(
         page_title="💖 팅커벨의 달콤한 베스킨라빈스 키오스크 💖",
-        layout="centered", # 또는 "wide"
-        initial_sidebar_state="collapsed", # 사이드바 시작 시 숨김
-        icon="🍦"
+        # layout="centered", # 이 줄은 잠시 주석 처리 (제거)
+        # initial_sidebar_state="collapsed", # 이 줄도 잠시 주석 처리 (제거)
+        # icon="🍦" # 이 줄도 잠시 주석 처리 (제거)
     )
 
+    st.title("🍦 베스킨라빈스 키오스크에 오신 것을 환영해요! ✨", anchor=False)
+    st.subheader("달콤한 아이스크림과 함께 행복을 채워보세요! 😊", anchor=False)
+    # ... (이하 코드는 동일)
     st.title("🍦 베스킨라빈스 키오스크에 오신 것을 환영해요! ✨", anchor=False)
     st.subheader("달콤한 아이스크림과 함께 행복을 채워보세요! 😊", anchor=False)
 
