@@ -1,18 +1,13 @@
 import streamlit as st
 
 def main():
-    # 🍦 페이지 설정: 기본 타이틀만 남겨봅니다!
+    # 🍦 페이지 설정: 기본 타이틀만 남겨봅니다! (지난번 성공한 설정!)
     st.set_page_config(
         page_title="💖 팅커벨의 달콤한 베스킨라빈스 키오스크 💖",
-        # layout="centered", # 이 줄은 잠시 주석 처리 (제거)
-        # initial_sidebar_state="collapsed", # 이 줄도 잠시 주석 처리 (제거)
-        # icon="🍦" # 이 줄도 잠시 주석 처리 (제거)
     )
 
     st.title("🍦 베스킨라빈스 키오스크에 오신 것을 환영해요! ✨", anchor=False)
     st.subheader("달콤한 아이스크림과 함께 행복을 채워보세요! 😊", anchor=False)
-    # ... (이하 코드는 동일)
-
 
     st.markdown("---") # 깔끔한 구분선
 
@@ -97,7 +92,7 @@ def main():
     st.subheader("어떤 방법으로 결제하시겠어요? 💳", anchor=False)
     payment_method = st.radio(
         "원하시는 결제 방법을 선택해주세요.",
-        ("카드결제 💳", "현금결제 💰"),
+        ("카드결제 💳", "현금결제 💰", "기프티콘 결제 🎁"),
         index=0, # 기본값은 '카드결제'
         horizontal=True,
         help="편하신 방법으로 결제하시면 됩니다."
@@ -111,6 +106,14 @@ def main():
         st.success("✅ 주문이 성공적으로 접수되었습니다! 잠시만 기다려주세요! 😊")
         st.balloons() # 축하 풍선!
 
+        # 😻 귀여운 아기고양이 이미지 추가!
+        # 여기에 단님이 찾으신 아기고양이 이미지 URL을 붙여넣으세요!
+        st.image(
+            "https://i.imgur.com/7d7Cg1G.jpg", # ✨ 이 URL을 단님이 찾으신 이미지 URL로 바꿔주세요!
+            caption="귀여운 아기고양이가 주문 완료를 축하해요! 😻",
+            width=300 # 이미지의 너비를 조절할 수 있어요. (원치 않으면 이 줄은 지워도 됩니다)
+        )
+        
         st.markdown("### 📝 단 님의 주문 내역")
         st.write(f"- **이용 방법**: {order_type} 🥳")
         st.write(f"- **선택 용기**: {selected_container_name}")
@@ -122,7 +125,6 @@ def main():
         st.markdown(f"## 💰 최종 결제 금액: <span style='color:green;'>**{total_price:,.0f}원**</span> 입니다! 다시 한번 감사드려요! 💖", unsafe_allow_html=True)
 
         st.info("💡 맛있게 드시고 행복한 하루 되세요! 이 화면은 잠시 후 초기화됩니다. (실제 앱에서는 페이지 새로고침이나 세션 초기화 로직을 추가할 수 있어요!)")
-        # 실제 환경에서는 st.session_state를 초기화하거나, streamlit.experimental_rerun() 등을 사용해 페이지를 다시 로드할 수 있습니다.
         # st.experimental_rerun() # 여기서는 예시를 위해 주석 처리합니다.
 
     else:
